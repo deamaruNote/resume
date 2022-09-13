@@ -1,25 +1,23 @@
 *{
     margin: 0;
     padding: 0;
+    transition: all .2s ease-in;
 }
 
-:root{
- --normal-text: #000;
- --normal-bcg:    #fff;
- --normal-grey:  #333;
- --dark-text: #eee;
- --dark-bcg: #000;
-}
 body{
     --normal-text: #000;
     --normal-bcg:  #fff;
     --normal-grey: #333;
+    --normal-hover: #eeeeee80;
+    --normal-shadow: #00000030;
     background-color: var(--normal-bcg);
 }
 body.dark{
     --normal-text:#fff;
     --normal-bcg:  #000;
     --normal-grey: #999;
+    --normal-hover: #555555a0;
+    --normal-shadow: #ffffff;
     .switch-color::before{
         left: 16px;
     }
@@ -40,7 +38,7 @@ nav{
         border-radius: 15px;
         width: 40px;
         height: 20px;
-        margin: 10px;
+        margin: 20px;
         box-sizing: border-box;
         cursor: pointer;
         &:before{
@@ -52,7 +50,6 @@ nav{
             height: 15px;
             border-radius: 10px;
             background-color: var(--normal-grey);
-            transition: all .2s ease-in;
         }
         input{
             display: none;
@@ -125,9 +122,10 @@ section.history{
     }
     .separate{
         position: relative;
-        width: 700px;
+        width: 750px;
         display: flex;
         justify-content: space-between;
+        background-color: #00000000;
         &:before{
             content: '';
             position: absolute;
@@ -141,6 +139,19 @@ section.history{
         }
         &:last-child::before{
             height: 90%;
+        }
+        &:hover{
+            .dot{
+                background-color: var(--normal-text);
+                box-shadow: 0 0 8px var(--normal-shadow);
+            }
+            .textbox{
+                background-color: var(--normal-hover);
+                transform: translateY(-3px);
+            }
+            .photo{
+                opacity: 1;
+            }
         }
         .year{
             font-size: 50px;
@@ -159,6 +170,8 @@ section.history{
         .textbox{
             width: calc(70% - 47px);
             padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
             h3{
                 font-size: 28px;
             }
@@ -175,6 +188,27 @@ section.history{
                 li{
                     font-weight: 300;
                     line-height: 1.8rem;
+                }
+            }
+        }
+        .photo{
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            right: -200px;
+            .img{
+                display: block;
+                height: 100px;
+                box-shadow: 0 0 3px var(--normal-shadow);
+                margin-bottom: 15px;
+                img{
+                    height: 100%;
+                }
+                &:hover{
+                    box-shadow: 0 0 15px var(--normal-shadow);
+                }
+                &:nth-child(2){
+                    transform: translateX(20px);
                 }
             }
         }
