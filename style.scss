@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+ --normal-text: #000;
+ --normal-bcg:    #fff;
+ --normal-grey:  #333;
+ --dark-text: #eee;
+ --dark-bcg: #000;
+}
+body{
+    --normal-text: #000;
+    --normal-bcg:  #fff;
+    --normal-grey: #333;
+    background-color: var(--normal-bcg);
+}
+body.dark{
+    --normal-text:#fff;
+    --normal-bcg:  #000;
+    --normal-grey: #999;
+    .switch-color::before{
+        left: 16px;
+    }
+}
+.grey{
+    color: var(--normal-grey);
+}
+nav{
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    .switch-color{
+        position: relative;
+        float: right;
+        border: 1.5px solid var(--normal-grey);
+        background-color: var(--normal-bcg);
+        border-radius: 15px;
+        width: 40px;
+        height: 20px;
+        margin: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: 20px;
+            height: 15px;
+            border-radius: 10px;
+            background-color: var(--normal-grey);
+            transition: all .2s ease-in;
+        }
+        input{
+            display: none;
+        }
+    }
+}
+@mixin maxheight{
+    min-height: 100vh;
+    background-color: var(--normal-bcg);
+    color: var(--normal-text);
+}
+@mixin flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.intro{
+    @include flexcenter();
+    @include maxheight();
+    .photo{
+        width: 500px;
+        aspect-ratio: 1 / 1;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .textbox{
+        width: 50%;
+        max-width: 500px;
+        h3{
+            font-size: 100px;
+            letter-spacing: 2px;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--normal-text);
+            transform: translate(-80px, -30%);
+            white-space: nowrap;
+        }
+        .content{
+            @include flexcenter();
+            flex-direction: column;
+        }
+        ul{
+            width: 280px;
+            margin: 20px 0 0 20px;
+            font-size: 14px;
+        }
+        .card, ul li{
+            line-height: 1.5rem;
+            color: var(--normal-grey);
+        }
+    }
+}
+section.history{
+    position: relative;
+    margin: 50px 0;
+    @include flexcenter();
+    @include maxheight();
+    flex-direction: column;
+    &:before{
+        content: '經歷empirical';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 10vw;
+        transform: rotate(90deg) translate(50%, 23vw);
+        -webkit-text-stroke: 2px var(--normal-text);
+        color: transparent;
+        opacity: 0.3;
+    }
+    .separate{
+        position: relative;
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: calc(30% - 20px);
+            width: 28px;
+            height: calc(100% + 35px);
+            border-left: 3px solid var(--normal-text);
+            border-top: 3px solid var(--normal-text);
+            border-top-left-radius: 30px;
+        }
+        &:last-child::before{
+            height: 90%;
+        }
+        .year{
+            font-size: 50px;
+            font-weight: 300;
+            width: 30%;
+            color: var(--normal-grey);
+        }
+        .dot{
+            width: 15px;
+            height: 15px;
+            margin: 30px 25px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border: 3px solid var(--normal-text);
+        }
+        .textbox{
+            width: calc(70% - 47px);
+            padding: 15px;
+            h3{
+                font-size: 28px;
+            }
+            small{
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+            .content{
+                line-height: 1.5rem;
+                font-size: 16px;
+                list-style: '- ';
+                font-weight: 600;
+                margin-left: 15px;
+                li{
+                    font-weight: 300;
+                    line-height: 1.8rem;
+                }
+            }
+        }
+    }
+}
+footer{
+    background-color: var(--normal-text);
+    color: var(--normal-bcg);
+    padding: 10px;
+    text-align: center;
+}

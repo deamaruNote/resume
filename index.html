@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resume</title>
+</head>
+<body>
+    <nav>
+      <label class="switch-color">
+        <input type="checkbox" class="form-check-input" 
+               name="" id="switchType" value="true" checked>
+      </label>
+    </nav>
+    <section class="intro">
+        <div class="photo">
+            <img src="./maru.jpeg" alt="吳昕怡">
+        </div>
+        <div class="textbox">
+            <h3>MARU-WU</h3>
+            <div class="content">
+                <div class="card">
+                    <p>吳昕怡</p>
+                    <p class="grey">研究所－中原大學 商業設計系[專攻UIUX]</p>
+                    <p class="grey">大學－中原大學 應用數學系</p>
+                </div>
+                <ul>
+                    <li> 網頁切版與網頁轉場動態特效</li>
+                    <li> 表單與使用者資料防範</li>
+                    <li> 善於溝通，釐清目標</li>
+                    <li> 前端架構規劃</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="history">
+        <div class="separate">
+            <span class="year">2022</span>
+            <spen class="dot"></spen>
+            <div class="textbox">
+                <h3>程澈科技 前端工程師</h3>
+                <small>2021.8-2022.8</small>
+                <ul class="content">
+                    <li> 完成UI/UX designer的需求，使系統兼具視覺及增加介面互動性</li>
+                    <li> 與後端工程師溝通API規格並串接資料</li>
+                    <li> 負責設計系統 (Design System) 模組開發、持續優化及撰寫技術規格文件</li>
+                    <li> 處理跨瀏覽器相容性</li>
+                </ul>
+            </div>
+        </div>
+        <div class="separate">
+            <span class="year">2021</span>
+            <spen class="dot"></spen>
+            <div class="textbox">
+                <h3>泰詠電子 MIS工程師</h3>
+                <small>兼職2021.5-2021.7</small>
+                <ul class="content">
+                    <li> 協助正職同仁電腦無法連線等疑難雜症 </li>
+                    <li> 設備清點作業</li>
+                    <li> 協助同仁部署資安軟體</li>
+                </ul>
+            </div>
+        </div>
+        <div class="separate">
+            <span class="year">2018</span>
+            <spen class="dot"></spen>
+            <div class="textbox">
+                <h3>太形整合行銷 UI設計師</h3>
+                <small>2018.8-2021.5</small>
+                <ul class="content">
+                    <li> 與業務溝通，規劃產品資訊等架構與理解需求 </li>
+                    <li> 房產業電子表板等介面製作、與維護更新 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="separate">
+            <span class="year">2017</span>
+            <spen class="dot"></spen>
+            <div class="textbox">
+                <h3>皇家皮飾 網頁美編/行銷</h3>
+                <small>2017.8-2021.7</small>
+                <ul class="content">
+                    <li> 品牌規劃與商品拍攝、EDM及banner製作 </li>
+                    <li> 電子商務首頁規劃，網頁編排切版(html、dreamweaver) </li>
+                    <li> 店內文宣及包裝各類獨立製作、社群粉絲團小編 </li>
+                    <li> 社群活動，所需海報及相關設計 </li>
+                    <li> 電商平台營運( 樂天平台經營、Yahoo拍賣經營、momo摩天商城經營 )</li>
+                    <li> B2C電子商務行銷與客服等，獨立作業</li>
+                </ul>
+            </div>
+        </div>
+        <div class="separate">
+            <span class="year"></span>
+            <spen class="dot"></spen>
+            <div class="textbox">
+                <h3>FIND DESIGN 設計助理</h3>
+                <small>2017.8-2021.7</small>
+                <ul class="content">
+                    <li> logo設計、拍攝商品、海報、採單、廣告看板等設計、繪圖、美術編輯等工獨立工作 </li>
+                    <li> 找合適平面產品的印刷廠商，以及溝通 </li>
+                    <li> 協助設計師其他等事務 </li>
+                </ul>
+            </div>
+        </div>
+        <div class="separate">
+            <span class="year">2016</span>
+            <spen class="dot"></spen>
+            <div class="textbox">
+                <h3>茂聯鴻廣告 美工人員</h3>
+                <small>2016.9-2016.12</small>
+                <ul class="content">
+                    <li> 製作平面稿(廣告招牌、帆布、書籍等等) </li>
+                    <li> 窗口與客戶跟工廠發包印刷 </li>
+                    <li> 卡典西德割字操作 </li>
+                    <li> 壓克力模具簡易組合 </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer> 
+        copyright © 2022. maru wu. all rights reserved
+    </footer>
+</body>
+</html>
+<script>
+    (function switchCase(){
+        let checkboxSwitch = document.getElementById('switchType');
+        checkboxSwitch.addEventListener('click', function(){
+            document.body.classList.toggle('dark');
+        });
+    })()
+</script>
