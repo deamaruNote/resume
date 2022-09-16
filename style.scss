@@ -103,6 +103,37 @@ section.intro{
         }
     }
 }
+
+
+section.expertise{
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+    .expertisebox{
+      display: flex;
+      border: 2px solid var(--normal-text);
+      border-radius: 10px;
+      margin: 20px 0;
+      padding: 0 10px;
+      .box{
+        margin: 15px;
+        text-align: center;
+      }
+      .box .image{
+        display: flex;
+        width: 50px;
+        height: 50px;
+        margin: 10px auto;
+      }
+      .box h4{
+        color: var(--normal-text);
+      }
+      .image img{
+        width: 100%;
+        margin: auto;
+      }
+    }
+  }
 section.history{
     position: relative;
     margin: 50px 0;
