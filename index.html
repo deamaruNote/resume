@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Resume</title>
+    <link rel="shortcut icon" href="img/icon.webp" type="image/x-icon">
+    <link href="img/icon.webp" rel="apple-touch-icon" />
+    <title>Maru's Resume</title>
 </head>
 <body>
     <nav>
@@ -268,6 +270,7 @@
     (function switchCase(){
         let checkboxSwitch = document.getElementById('switchType');
         checkboxSwitch.addEventListener('click', function(){
+            console.log('111')
             document.body.classList.toggle('dark');
         });
     })()

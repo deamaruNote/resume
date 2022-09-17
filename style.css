@@ -6,15 +6,27 @@
 }
 
 body {
-  background-color: #fff;
+  --normal-text: #000;
+  --normal-bcg: #fff;
+  --normal-grey: #333;
+  --normal-hover: #eeeeee80;
+  --normal-shadow: #00000030;
+  background-color: var(--normal-bcg);
 }
 
+body.dark {
+  --normal-text:#fff;
+  --normal-bcg: #000;
+  --normal-grey: #999;
+  --normal-hover: #555555a0;
+  --normal-shadow: #ffffff;
+}
 body.dark .switch-color::before {
   left: 16px;
 }
 
 .grey {
-  color: #333;
+  color: var(--normal-grey);
 }
 
 nav {
@@ -26,8 +38,8 @@ nav {
 nav .switch-color {
   position: relative;
   float: right;
-  border: 1.5px solid #333;
-  background-color: #fff;
+  border: 1.5px solid var(--normal-grey);
+  background-color: var(--normal-bcg);
   border-radius: 15px;
   width: 40px;
   height: 20px;
@@ -43,7 +55,7 @@ nav .switch-color:before {
   width: 20px;
   height: 15px;
   border-radius: 10px;
-  background-color: #333;
+  background-color: var(--normal-grey);
 }
 nav .switch-color input {
   display: none;
@@ -54,8 +66,8 @@ section.intro {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--normal-bcg);
+  color: var(--normal-text);
 }
 section.intro .photo {
   width: 500px;
@@ -73,7 +85,7 @@ section.intro .textbox h3 {
   font-size: 100px;
   letter-spacing: 2px;
   color: transparent;
-  -webkit-text-stroke: 2px #000;
+  -webkit-text-stroke: 2px var(--normal-text);
   transform: translate(-80px, -30%);
   white-space: nowrap;
 }
@@ -90,7 +102,7 @@ section.intro .textbox ul {
 }
 section.intro .textbox .card, section.intro .textbox ul li {
   line-height: 1.5rem;
-  color: #333;
+  color: var(--normal-grey);
 }
 
 section.expertise {
@@ -103,7 +115,7 @@ section.expertise {
   margin-bottom: 60px;
 }
 section.expertise h3 {
-  color: #000;
+  color: var(--normal-text);
   line-height: 2rem;
   margin-bottom: 0;
 }
@@ -114,7 +126,7 @@ section.expertise .half {
 section.expertise .expertisebox {
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid #000;
+  border: 2px solid var(--normal-text);
   border-radius: 10px;
   margin: 20px 0;
   padding: 0 10px;
@@ -135,7 +147,7 @@ section.expertise .expertisebox .box .image {
 }
 section.expertise .expertisebox .box h4 {
   font-size: 14px;
-  color: #000;
+  color: var(--normal-text);
 }
 section.expertise .expertisebox .image img {
   width: 100%;
@@ -149,8 +161,8 @@ section.history {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--normal-bcg);
+  color: var(--normal-text);
   flex-direction: column;
 }
 section.history:before {
@@ -160,7 +172,7 @@ section.history:before {
   left: 0;
   font-size: 10vw;
   transform: rotate(90deg) translate(50%, 23vw);
-  -webkit-text-stroke: 2px #000;
+  -webkit-text-stroke: 2px var(--normal-text);
   color: transparent;
   opacity: 0.3;
 }
@@ -178,19 +190,19 @@ section.history .separate:before {
   left: calc(30% - 20px);
   width: 28px;
   height: calc(100% + 35px);
-  border-left: 3px solid #000;
-  border-top: 3px solid #000;
+  border-left: 3px solid var(--normal-text);
+  border-top: 3px solid var(--normal-text);
   border-top-left-radius: 30px;
 }
 section.history .separate:last-child::before {
   height: 90%;
 }
 section.history .separate:hover .dot {
-  background-color: #000;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1882352941);
+  background-color: var(--normal-text);
+  box-shadow: 0 0 8px var(--normal-shadow);
 }
 section.history .separate:hover .textbox {
-  background-color: rgba(238, 238, 238, 0.5019607843);
+  background-color: var(--normal-hover);
   transform: translateY(-3px);
 }
 section.history .separate:hover .photo {
@@ -200,7 +212,7 @@ section.history .separate .year {
   font-size: 50px;
   font-weight: 300;
   width: 30%;
-  color: #333;
+  color: var(--normal-grey);
 }
 section.history .separate .dot {
   width: 15px;
@@ -208,7 +220,7 @@ section.history .separate .dot {
   margin: 30px 25px;
   box-sizing: border-box;
   border-radius: 50%;
-  border: 3px solid #000;
+  border: 3px solid var(--normal-text);
 }
 section.history .separate .textbox {
   width: calc(70% - 47px);
@@ -243,14 +255,14 @@ section.history .separate .photo {
 section.history .separate .photo .img {
   display: block;
   height: 100px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1882352941);
+  box-shadow: 0 0 3px var(--normal-shadow);
   margin-bottom: 15px;
 }
 section.history .separate .photo .img img {
   height: 100%;
 }
 section.history .separate .photo .img:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1882352941);
+  box-shadow: 0 0 15px var(--normal-shadow);
 }
 section.history .separate .photo .img:nth-child(2) {
   transform: translateX(20px);
@@ -262,7 +274,7 @@ section.sideproject {
   margin: 0 auto 50px auto;
 }
 section.sideproject .project-case {
-  border: 2px solid #000;
+  border: 2px solid var(--normal-text);
   border-radius: 10px;
   margin: 20px 0;
   padding: 10px 20px;
@@ -279,22 +291,22 @@ section.sideproject .project-case .case > * {
 section.sideproject .project-case .case .title {
   font-size: 24px;
   text-decoration: none;
-  color: #333;
+  color: var(--normal-grey);
 }
 section.sideproject .project-case .case .title, section.sideproject .project-case .case .content {
-  color: #000;
+  color: var(--normal-text);
 }
 section.sideproject .project-case .case .image {
   width: 200px;
-  border: 1px solid #000;
+  border: 1px solid var(--normal-text);
 }
 section.sideproject .project-case .case .image img {
   width: 100%;
 }
 
 footer {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--normal-text);
+  color: var(--normal-bcg);
   padding: 10px;
   text-align: center;
 }
