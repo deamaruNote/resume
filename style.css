@@ -297,10 +297,12 @@ section.sideproject .project-case .case .title, section.sideproject .project-cas
   color: var(--normal-text);
 }
 section.sideproject .project-case .case .image {
+  display: inline-block;
   width: 200px;
   border: 1px solid var(--normal-text);
 }
 section.sideproject .project-case .case .image img {
+  display: inline-block;
   width: 100%;
 }
 

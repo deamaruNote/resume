@@ -290,9 +290,11 @@ section.sideproject{
                 color: var(--normal-text);
             }
             .image{
+                display: inline-block;
                 width: 200px;
                 border: 1px solid var(--normal-text);
                 img{
+                    display: inline-block;
                     width: 100%;
                 }
             }
